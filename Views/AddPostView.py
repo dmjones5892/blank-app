@@ -2,10 +2,11 @@ import datetime
 import streamlit as st
 from Models import Post
 from typing import Callable
+
 class AddPostView:
     def __init__(self, add_post_func: Callable[[Post], bool]):
         user_name_text = st.text_input("Displayed name?")
-        post_text = st.text_input("What’s in your mind?")
+        post_text = st.text_input("What’s on your mind?")
         clicked = st.button("Post")
         if clicked:
             post = Post(

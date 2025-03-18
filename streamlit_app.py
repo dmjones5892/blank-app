@@ -1,13 +1,7 @@
 import streamlit as st
+from Views import FeedView, AddPostView
+from Services import get_feed, add_post
 
-conn = st.connection("snowflake")
-
-@st.cache_data
-def load_table():
-    session = conn.session()
-    return session.table("mytable").to_pandas()
-
-df = load_table()
-
-for row in df.itertuples():
-    st.write(f"{row.NAME} has a :{row.PET}:")
+AddPostView(add_post)
+st.write("___")
+FeedView(get_feed)
