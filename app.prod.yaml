@@ -1,0 +1,13 @@
+runtime: python39
+entrypoint: streamlit run app.py --server.port=8080 --server.enableCORS false
+
+env_variables:
+  ENV: "production"
+  STREAMLIT_SERVER_HEADLESS: "true"
+  # You can add any other production-specific variables here
+
+# Optional: You can configure automatic scaling or instance class if needed.
+# instance_class: F2
+# automatic_scaling:
+#   min_instances: 1
+#   max_instances: 3
