@@ -13,17 +13,6 @@ steps:
          '--region', 'us-west2',
          '--allow-unauthenticated']
 
-- name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
-  entrypoint: 'bash'
-  args:
-    - '-c'
-    - |
-      gcloud run services add-iam-policy-binding streamlit-app \
-        --member="allUsers" \
-        --role="roles/run.invoker" \
-        --platform managed \
-        --region us-west2
-
 images:
 - 'gcr.io/sec-460-devsecops/streamlit-app'
 
