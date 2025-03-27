@@ -10,7 +10,7 @@ steps:
   args: ['run', 'deploy', 'streamlit-app',
          '--image', 'gcr.io/sec-460-devsecops/streamlit-app',
          '--platform', 'managed',
-         '--region', 'us-central1',
+         '--region', 'us-west2',
          '--allow-unauthenticated']
 
 images:
